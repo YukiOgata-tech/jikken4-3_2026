@@ -1,0 +1,24 @@
+Task 5 data2 diversity combining
+h1_real: -0.016609658382
+h1_imag: 1.532898417941
+h1_abs: 1.532988401939
+h1_angle_deg: 90.620801790847
+h2_real: -0.108371577570
+h2_imag: -0.289063869112
+h2_abs: 0.308710737181
+h2_angle_deg: -110.551288283074
+weight_ant1: 0.961027217053
+weight_ant2: 0.038972782947
+
+single_frame_results
+変調信号(Ant１，TS１）: errors=2, ber=3.125000000000e-02
+変調信号(Ant１，TS２）: errors=0, ber=0.000000000000e+00
+変調信号(Ant２，TS１）: errors=14, ber=2.187500000000e-01
+変調信号(Ant２，TS２）: errors=18, ber=2.812500000000e-01
+
+ant1_two_slot_errors: 0
+ant2_two_slot_errors: 8
+combined_errors: 1
+combined_ber: 1.562500000000e-02
+tx_data_bits: 1100100111011000001101010101000101111011010001010010110111000000
+combined_bits: 1100100110011000001101010101000101111011010001010010110111000000
