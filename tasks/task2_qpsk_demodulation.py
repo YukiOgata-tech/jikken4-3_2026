@@ -26,7 +26,7 @@ def plot_task2(mod_result, demod_result, output_path: Path) -> None:
     pair_labels = ["".join(str(int(bit)) for bit in pair) for pair in mod_result.bit_pairs]
 
     fig = plt.figure(figsize=(12, 10), constrained_layout=True)
-    fig.suptitle("Task 2 QPSK Demodulation Waveforms", fontsize=14)
+    fig.suptitle("実施内容2 QPSK復調波形", fontsize=14)
     axes = [
         fig.add_subplot(5, 2, 1),
         fig.add_subplot(5, 2, 3),
@@ -93,7 +93,7 @@ def plot_constellation(demod_result, output_path: Path) -> None:
         demod_result.symbol_q,
         alpha=0.6,
         s=100,
-        label="Demodulated symbols",
+        label="復調シンボル",
         zorder=2,
     )
     ax.scatter(
@@ -102,14 +102,14 @@ def plot_constellation(demod_result, output_path: Path) -> None:
         marker="x",
         color="red",
         s=120,
-        label="Ideal symbols",
+        label="理想シンボル",
         zorder=3,
     )
     ax.axhline(0, color="black", linewidth=0.8)
     ax.axvline(0, color="black", linewidth=0.8)
     ax.set_xlabel("Inphase")
     ax.set_ylabel("Quadrature")
-    ax.set_title("Task 2 Demodulated Constellation")
+    ax.set_title("実施内容2 復調後シンボル点配置")
     ax.set_xlim(-1.5, 1.5)
     ax.set_ylim(-1.5, 1.5)
     ax.grid(True)

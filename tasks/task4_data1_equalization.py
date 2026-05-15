@@ -29,8 +29,8 @@ def plot_constellations(rx_data, eq_data, output_path: Path) -> None:
 
     fig, axes = plt.subplots(1, 2, figsize=(10, 5), constrained_layout=True)
     for ax, symbols, title in [
-        (axes[0], rx_data, "Before Equalization"),
-        (axes[1], eq_data, "After Equalization"),
+        (axes[0], rx_data, "等化前"),
+        (axes[1], eq_data, "等化後"),
     ]:
         ax.scatter(symbols.real, symbols.imag)
         ax.axhline(0, color="black", linewidth=0.8)
@@ -41,7 +41,7 @@ def plot_constellations(rx_data, eq_data, output_path: Path) -> None:
         ax.set_xlim(-2, 2)
         ax.set_ylim(-2, 2)
         ax.grid(True)
-    fig.suptitle("Task 4 data1 Constellation")
+    fig.suptitle("実施内容4 data1のシンボル点配置")
     fig.savefig(output_path, dpi=300)
     plt.close(fig)
 

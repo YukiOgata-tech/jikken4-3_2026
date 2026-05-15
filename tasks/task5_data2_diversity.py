@@ -50,8 +50,8 @@ def plot_task5(single_symbols, combined_symbols, output_path: Path) -> None:
 
     fig, axes = plt.subplots(1, 2, figsize=(10, 5), constrained_layout=True)
     for ax, symbols, title in [
-        (axes[0], single_symbols, "Best Single Frame"),
-        (axes[1], combined_symbols, "Diversity Combined"),
+        (axes[0], single_symbols, "最良の単一フレーム"),
+        (axes[1], combined_symbols, "ダイバーシチ合成後"),
     ]:
         ax.scatter(symbols.real, symbols.imag)
         ax.axhline(0, color="black", linewidth=0.8)
@@ -62,7 +62,7 @@ def plot_task5(single_symbols, combined_symbols, output_path: Path) -> None:
         ax.set_xlim(-2, 2)
         ax.set_ylim(-2, 2)
         ax.grid(True)
-    fig.suptitle("Task 5 data2 Diversity Combining")
+    fig.suptitle("実施内容5 data2のダイバーシチ合成")
     fig.savefig(output_path, dpi=300)
     plt.close(fig)
 

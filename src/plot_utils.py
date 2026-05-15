@@ -12,8 +12,16 @@ def setup_matplotlib() -> None:
     cache_dir.mkdir(parents=True, exist_ok=True)
     os.environ.setdefault("MPLCONFIGDIR", str(cache_dir.resolve()))
     import matplotlib
+    from matplotlib import font_manager
 
     matplotlib.use("Agg", force=True)
+    japanese_font = Path("/System/Library/Fonts/ヒラギノ角ゴシック W3.ttc")
+    if japanese_font.exists():
+        font_manager.fontManager.addfont(str(japanese_font))
+        matplotlib.rcParams["font.family"] = "Hiragino Sans"
+    else:
+        matplotlib.rcParams["font.family"] = "sans-serif"
+    matplotlib.rcParams["axes.unicode_minus"] = False
 
 
 def ensure_output_dirs() -> None:

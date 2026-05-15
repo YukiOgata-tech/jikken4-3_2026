@@ -25,7 +25,7 @@ def plot_task1(result, output_path: Path) -> None:
     pair_labels = ["".join(str(int(bit)) for bit in pair) for pair in result.bit_pairs]
 
     fig, axes = plt.subplots(5, 1, figsize=(8, 9), constrained_layout=True)
-    fig.suptitle("Task 1 QPSK Modulation Waveforms", fontsize=14)
+    fig.suptitle("実施内容1 QPSK変調波形", fontsize=14)
 
     axes[0].stem(symbol_index, result.symbol_i)
     axes[0].set_ylabel("$u_I$")
